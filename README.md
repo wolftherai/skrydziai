@@ -1,65 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Skrydziai
+Reference sheet for the project. To be edited when more relevant info needs to be displayed in a convenient location.
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Installation
 
-## About Laravel
+Since github doesn't track all of the files that are needed for the application to fucntion, there is some setup work that needs to be 
+done. 
+This guide is relevant for windows users, using [Xampp](https://www.apachefriends.org/index.html) to host the website locally.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Prerequisite software
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+[Xampp](https://www.apachefriends.org/index.html) for hosting the website. Apache, MySql and PHP are included in the instalation and don't
+have to be installed separately.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+[Composer](https://getcomposer.org/download/) for managing dependencies. I recommend to download the installer and not bother with the 
+command line installation method.
 
-## Learning Laravel
+**Handy, but not necessarily needed:** <br/>
+[Github desktop](https://desktop.github.com/) - a conveniant tool for collaboration with git. Provides a graphical user interface for 
+git, so work can be done without using the git bash.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Cloning the repository
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Now when xampp is installed, you need to clone the reposiroty into the Xampp/htdocs folder. Instructions on how to clone a repository can 
+be found [here](https://services.github.com/on-demand/github-desktop/clone-repository-github-desktop). Just don't forget to set the local path to a subfolder of Xampp/htdocs (**example path:** C:\Users\Ikiwi\Desktop\XAMPP\htdocs\skrydziai).
 
-## Laravel Sponsors
+### Downloading required libraries
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Since we're using Laravel framework our code is dependent on external libraries. To download those libraries follow these steps: <br/>
 
-### Premium Partners
+1. Run windows command prompt as an aministrator.
+2. Navigate to /skrydziai directory (with cmd).
+3. Run the following command:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+    ```shell
+    composer install
+    ```
+All of the required libs should be installed now without the need to do anything else.
 
-## Contributing
+### Setting application encryption key
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Laravel framework requires an encryption key and an .env file. This file should be located in \skrydziai folder along with .env.example. 
+If it's not there (which it will likely be, if you cloned the repo), you need to create it and copy .env.example file content into it.
+This can be easily done by simply running this command in cmd (make sure you are in \skrydziai directory).
+```shell
+copy .env.example .env
+```
+After the .env file is there and filled with .env.example content, run:
+```shell
+php artisan key:generate
+```
 
-## Code of Conduct
+### Creating storage folders
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Navigate to \skrydziai directory and run the following commands into cmd:
+```shell
+php artisan storage:link
+```
 
-## Security Vulnerabilities
+### Database setup
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+First you need to create the database itself and setup a user account for that database using phpmyadmin. Instructions on how to to that
+can be found [Here](http://webvaultwiki.com.au/Create-Mysql-Database-User-Phpmyadmin.ashx). Don't create any tables yet, that will
+be done through migrations. <br/>
 
-## License
+Once that is done, open up the .env file (located in \skrydziai) and change DB_DATABASE, DB_USERNAME and DB_PASSWORD to match the values that you chose during database creation process. </br>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Once the database is connected, navigate to \skrydziai folder with cmd and run the following command:
+```shell
+php artisan migrate
+```
+All the required tables will be created using the migration files located [here](https://github.com/nikamodis/skrydziai/tree/master/database/migrations)
+
+After that, run the following command, to create admin user:
+```shell
+php artisan db:seed
+```
+
+Admin user logins:
+```shell
+admin@gmail.com
+Admin123.
+```

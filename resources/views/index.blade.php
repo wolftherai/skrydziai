@@ -26,7 +26,7 @@
                 </div>
                 <div class="row">
                     <div class="form-group col-4">
-                        <input id="datepicker" name="departureDate"/>
+                        <input id="datepicker" name="departureDate" class="bg-light"/>
                     </div>
                     <div class="col-4">
                         <input type="submit" value="Ieškoti bilieto"></input>

@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container mt-5">
-        <table class="table">
+        <table class="table bg-light">
             <thead>
                 <tr>
                     <th scope="col">Nr.</th>
