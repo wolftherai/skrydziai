@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/pagalba', [App\Http\Controllers\HomeController::class, 'support'])->name('support');
+Route::get('/skrydziai', [App\Http\Controllers\HomeController::class, 'findFlight'])->name('findFlight');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
