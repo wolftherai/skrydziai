@@ -1,0 +1,314 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	background: url(/storage/images/bg.jpg) no-repeat;
+	background-size: cover;
+	height: 150vh;
+}
+.wrapper .center {
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	font-family: 'Oswald', sans-serif;
+	user-select: none;
+}
+.footer1 {
+	position: absolute;
+	top: 115%;
+	left: 20%;
+	width: 350px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Inconsolata', sans-serif;
+}
+.footer2 {
+	position: absolute;
+	top: 115%;
+	left: 45%;
+	width: 350px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Inconsolata', sans-serif;
+}
+.footer3 {
+	position: absolute;
+	top: 115%;
+	left: 65%;
+	width: 350px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Inconsolata', sans-serif;
+}
+.center h1 {
+	color: white;
+	font-size: 60px;
+	font-weight: bold;
+	width: 900px;
+	text-align: center;
+}
+.center h2 {
+	color: white;
+	font-size: 50px;
+	font-weight: bold;
+	width: 885px;
+	margin-top: 10px;
+	text-align: center;
+}
+/*
+.center .buttons {
+	margin: 35px 280px;
+}
+.buttons button {
+	height: 50px;
+	width: 150px;
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+	background: purple;
+	border: 1px solid #4B0082;
+	outline: none;
+	cursor: pointer;
+	border-radius: 25px;
+}
+.buttons .btn {
+	margin-left: 25px;
+}
+.buttons button:hover {
+	background: #BA55D3;
+}*/
+.navbar {
+	height: 85px;
+	width: 100%;
+	background: rgba(0,0,0,0.4);
+}
+.navbar ul {
+	float: right;
+	margin-right: 20px;
+}
+.navbar li {
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px
+}
+.navbar ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	padding: 6px 13px;
+	font-family: 'Cairo', sans-serif;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover {
+	background: purple;
+	border-radius: 2px;
+}
+.logo {
+	height: auto;
+	width: 300px;
+	padding: 10px 100px;
+}
+form input {
+	height: 30px;
+	width: 35%;
+	padding: 0 10px;
+	border-radius: 3px;
+	border: 1px solid silver;
+	font-size: 18px;
+	outline: none;
+}
+form input[type="submit"] {
+	width: 175px;
+	border: 1px solid #4B0082;
+	margin-top: 40px
+	margin-bottom: 40px;
+	color: white;
+	cursor: pointer;
+	border-radius: 45px;
+	border-radius: 5px;
+	background: purple;
+}
+form input[type="submit"]:hover {
+	background: #BA55D3;
+}
+.forma {
+	right: 20%;
+	width: 430px;
+	margin: 50px auto;
+	position: relative;
+
+}
+.forma .header {
+	color: white;
+	font-size: 28px;
+	font-family: 'Oxanium', sans-serif;
+	font-weight: bold;
+	background: #5c1769;
+	padding: 25px 0 30px 25px;
+	border-bottom: 1px solid #340e3f;
+	border-radius: 5px 5px 0 0;
+}
+.forma form {
+	position: absolute;
+	background: white;
+	width: 100%;
+	padding: 50px 10px 0 30px;
+	box-sizing: border-box;
+	border: 1px solid #6d1c7d;
+	border-radius: 0 0 5px 5px;
+}
+.forma input {
+	height: 50px;
+	width: 90%;
+	padding: 0 10px;
+	border-radius: 3px;
+	border: 1px solid silver;
+	font-size: 18px;
+	outline: none;
+}
+.forma textarea {
+	margin-top: 10px;
+	height: 150px;
+	width: 90%;
+	padding: 0 10px;
+	border-radius: 3px;
+	border: 1px solid silver;
+	font-size: 18px;
+	outline: none;
+}
+.forma form input[type="password"] {
+	margin-top: 10px;
+}
+.forma form input[type="text"] {
+	margin-top: 10px;
+}
+.forma form input[type='submit'] {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 130px;
+	height: 45px;
+	color: white;
+	cursor: pointer;
+	line-height: 45px;
+	border-radius: 45px;
+	border-radius: 5px;
+	background: #5c1769;
+}
+.forma form i {
+	position: absolute;
+	font-size: 25px;
+	color: grey;
+	margin: 15px 0 0 -45px;
+}
+.forma i.fa-lock {
+	margin-top: 35px;
+}
+.help {
+	left: 40%;
+	top: 30%;
+	position: absolute;
+	color: white;
+	font-size: 60px;
+	font-weight: bold;
+	font-family: 'Inconsolata', sans-serif;
+	text-align: center;
+}
+
+.wrapper_pultas {
+	background: url(/storage/images/bg_pultas.jpg) no-repeat;
+	background-size: cover;
+	height: 97vh;
+}
+.wrapper_pultas .center {
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	font-family: 'Oswald', sans-serif;
+	user-select: none;
+}
+
+.forma_pultas {
+	width: 800px;
+	margin: 50px auto;
+	position: relative;
+	right: 25%;
+}
+.forma_pultas .header {
+	color: white;
+	font-size: 28px;
+	font-family: 'Oxanium', sans-serif;
+	font-weight: bold;
+	background: #5c1769;
+	padding: 25px 0 30px 25px;
+	border-bottom: 1px solid #340e3f;
+	border-radius: 5px 5px 0 0;
+}
+.forma_pultas form {
+	position: absolute;
+	background: white;
+	width: 100%;
+	padding: 50px 10px 0 30px;
+	box-sizing: border-box;
+	border: 1px solid #6d1c7d;
+	border-radius: 0 0 5px 5px;
+}
+.forma_pultas input {
+	height: 50px;
+	width: 90%;
+	padding: 0 10px;
+	border-radius: 3px;
+	border: 1px solid silver;
+	font-size: 18px;
+	outline: none;
+}
+.forma_pultas textarea {
+	margin-top: 10px;
+	height: 150px;
+	width: 90%;
+	padding: 0 10px;
+	border-radius: 3px;
+	border: 1px solid silver;
+	font-size: 18px;
+	outline: none;
+}
+.forma_pultas form input[type="password"] {
+	margin-top: 20px;
+}
+.forma_pultas form input[type='submit'] {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	width: 130px;
+	height: 45px;
+	color: white;
+	cursor: pointer;
+	line-height: 45px;
+	border-radius: 45px;
+	border-radius: 5px;
+	background: #5c1769;
+}
+.forma_pultas form i {
+	position: absolute;
+	font-size: 25px;
+	color: grey;
+	margin: 15px 0 0 -45px;
+}
+.forma_pultas i.fa-lock {
+	margin-top: 35px;
+}
+.btn.btn-primary{
+    margin-top: 40px;
+	margin-bottom: 40px;
+	width: 130px;
+	height: 45px;
+	color: white;
+	cursor: pointer;
+	line-height: 45px;
+	border-radius: 45px;
+	border-radius: 5px;
+	background: #5c1769;
+}

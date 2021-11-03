@@ -1,4 +1,4 @@
-<x-guest-layout>
+{{-- <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
@@ -56,4 +56,39 @@
             </div>
         </form>
     </x-auth-card>
-</x-guest-layout>
+</x-guest-layout> --}}
+
+@extends('layouts.master')
+@section('content')
+    <div class="forma">
+        <div class="header">Registracija</div>
+        <!-- Session Status -->
+        <x-auth-session-status class="mb-4" :status="session('status')" />
+
+        <!-- Validation Errors -->
+        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
+            <x-label for="name" :value="__('Name')" />
+            <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+
+            <x-label for="email" :value="__('Email')" />
+            <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+                autofocus />
+
+            <x-label for="password" :value="__('Password')" />
+            <x-input id="password" class="block mt-1 w-full" type="password" name="password" required
+                autocomplete="current-password" />
+
+            <x-label for="password_confirmation" :value="__('Confirm Password')" />
+
+                <x-input id="password_confirmation" class="block mt-1 w-full"
+                                type="password"
+                                name="password_confirmation" required />    
+            <x-button class="btn btn-primary">
+                {{ __('Register') }}
+            </x-button>
+        </form>
+    </div>
+@endsection
